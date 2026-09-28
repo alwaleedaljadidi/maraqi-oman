@@ -263,6 +263,26 @@ details.fq p{margin:0;padding:0 12px 10px;line-height:1.7}
 .ck-bk{margin:-2px 0 12px}.ck-bk>span{font-size:.9rem;font-weight:700}#ck-bk-list{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 4px}#ck-bk-list .chip[aria-pressed="true"]{border-color:var(--ok);background:var(--ok-soft);color:var(--ok)}
 .hero .wrap{display:flex;align-items:center;gap:14px}.hero-main{flex:1 1 auto;min-width:0}.flag-box{flex:none;display:flex;flex-direction:column;align-items:center;gap:5px}html[dir="ltr"] .flag-box{order:-1}.flag-cap{font-weight:700;font-size:15px;white-space:nowrap;color:#E46424;background:linear-gradient(180deg,#F4881C 35%,#E46424);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .wa-fb{display:inline-block;margin-top:6px;padding:8px 12px;border-radius:10px;background:#25D366;color:#fff !important;font-weight:700;text-decoration:none}
+.ai-hub{margin:14px 0 18px;padding:14px;border-radius:18px;background:linear-gradient(160deg,var(--ochre-soft),var(--surface) 55%);border:1.5px solid var(--ochre)}
+.aih-head{display:flex;gap:12px;align-items:flex-start}.aih-head h3{margin:0 0 4px;color:var(--ochre);font-size:19px}.aih-head p{margin:0;font-size:14px}
+.ai-badge{flex:none;background:var(--ochre);color:#fff;font-weight:800;border-radius:12px;padding:8px 10px;font-size:18px;letter-spacing:1px;font-family:Arial,sans-serif}
+.aih-engine{margin:10px 0 6px;font-size:13px;font-weight:700;color:var(--ok)}
+.ai-tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:8px;margin:10px 0 12px}
+.ai-tools button{display:flex;flex-direction:column;align-items:center;gap:2px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:14px;padding:10px 6px;font:inherit;font-weight:700;font-size:13.5px;cursor:pointer;text-align:center}
+.ai-tools button small{font-weight:400;font-size:11px;color:var(--muted)}
+.ai-tools button[aria-selected="true"]{border-color:var(--ochre);background:var(--ochre-soft);color:var(--ochre)}
+.ait-ico{font-size:22px;line-height:1.2}
+.ai-panel h3{margin:4px 0 2px}
+.ai-out{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:15px;line-height:1.7}
+.ai-out:empty{display:none}.ai-out ul{margin:4px 0;padding-inline-start:20px}.ai-out p{margin:0 0 6px}.ai-out h4{margin:0 0 6px;color:var(--ochre)}
+#tr-to,#pl-trail,#pl-who,#tr-in{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:10px;margin-bottom:10px;box-sizing:border-box}
+.pl-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pl-row input{width:100%;box-sizing:border-box;margin-bottom:10px}
+.tr-big{font-size:26px;font-weight:700;line-height:1.5;color:var(--ink);margin:4px 0 6px!important}
+.tr-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.tr-chips .chip{white-space:normal;text-align:start}
+.id-name{font-size:20px;font-weight:700}.dz{font-size:12px;border-radius:99px;padding:2px 10px;vertical-align:middle;margin-inline-start:6px}
+.dz-0{background:var(--ok-soft);color:var(--ok)}.dz-1{background:var(--wadi-soft);color:var(--wadi)}.dz-2{background:var(--danger-soft);color:var(--danger)}
+.wx-v{border-radius:10px;padding:8px 10px}.wx-0{background:var(--ok-soft)}.wx-1{background:var(--wadi-soft)}.wx-2{background:var(--wadi-soft)}.wx-3{background:var(--danger-soft);color:var(--danger)}
+.pl-tl{list-style:none;padding:0!important}.pl-tl li{padding:3px 0;border-bottom:1px dashed var(--line)}.pl-ck{background:var(--ok-soft);color:var(--ok);border-radius:10px;padding:8px 10px;font-weight:700}
 .pk-card{position:relative;border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:3px;background:var(--bg)}
 .pk-card:first-child{border-color:var(--wadi);background:var(--wadi-soft)}
 .pk-best{align-self:flex-start;background:var(--wadi);color:#fff;border-radius:999px;font-size:12px;font-weight:700;padding:1px 10px}
@@ -394,6 +414,47 @@ input[type=date],input[type=number],#hs-box textarea,#fq-q{width:100%;font:inher
   </section>
   <section id="v-ai" class="view">
     <div class="ai-hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg><h2 class="section-title" style="margin:0" data-i="ai_title"></h2></div>
+    <div id="ai-unavail" hidden></div>
+    <div class="ai-hub" id="ai-box">
+      <div class="aih-head"><span class="ai-badge">AI</span><div><h3 data-i="aih_title"></h3><p data-i="aih_intro"></p></div></div>
+      <p class="aih-engine" id="aih-engine"></p>
+      <button type="button" class="gbtn" id="aih-dl" hidden></button>
+      <div class="ai-tools" id="ai-tools" role="tablist"></div>
+      <div class="ai-panel" data-p="0">
+        <h3 data-i="ai_chat_h"></h3><p class="muted-s" data-i="ai_intro"></p>
+        <div id="ai-sugg"></div>
+        <div id="ai-log" aria-live="polite"></div>
+        <form id="ai-form"><input id="ai-q" autocomplete="off"><button type="submit" id="ai-send" data-i="ai_send"></button><button type="button" id="ai-stop" hidden data-i="ai_stop"></button></form>
+        <div class="ai-meta"><button type="button" class="linkbtn" id="ai-clear" data-i="ai_clear"></button></div>
+      </div>
+      <div class="ai-panel" data-p="1" id="ai-photo">
+        <h3 data-i="ai_photo_h"></h3><p class="muted-s" data-i="ai_photo_note"></p>
+        <label class="addph" style="margin-top:10px"><span data-i="ai_photo_btn"></span><input type="file" accept="image/*" id="ai-photo-in"></label>
+        <div id="ai-photo-out" class="ai-out" aria-live="polite"></div>
+      </div>
+      <div class="ai-panel" data-p="2" hidden>
+        <h3 data-i="id_h"></h3><p class="muted-s" data-i="id_note"></p>
+        <label class="addph" style="margin-top:10px"><span data-i="id_btn"></span><input type="file" accept="image/*" id="id-in"></label>
+        <div id="id-out" class="ai-out" aria-live="polite"></div>
+      </div>
+      <div class="ai-panel" data-p="3" hidden>
+        <h3 data-i="tr_h"></h3><p class="muted-s" data-i="tr_note"></p>
+        <label class="pk-l" for="tr-to" data-i="tr_to"></label><select id="tr-to"></select>
+        <textarea id="tr-in" rows="2"></textarea>
+        <button type="button" class="primary" id="tr-go" data-i="tr_go"></button>
+        <div id="tr-out" class="ai-out" aria-live="polite"></div>
+      </div>
+      <div class="ai-panel" data-p="4" hidden>
+        <h3 data-i="pl_h"></h3><p class="muted-s" data-i="pl_note"></p>
+        <label class="pk-l" for="pl-trail" data-i="c_trail"></label><select id="pl-trail"></select>
+        <div class="pl-row"><div><label class="pk-l" for="pl-date" data-i="pl_date"></label><input type="date" id="pl-date"></div><div><label class="pk-l" for="pl-time" data-i="pl_time"></label><input type="time" id="pl-time" value="06:30"></div></div>
+        <label class="pk-l" for="pl-who" data-i="pk_who"></label><select id="pl-who"></select>
+        <button type="button" class="primary" id="pl-go" data-i="pl_go"></button>
+        <div id="pl-out" class="ai-out" aria-live="polite"></div>
+      </div>
+      <p class="muted-s" data-i="ai_disclaimer"></p>
+    </div>
+
     <div class="block pk">
       <h3 data-i="pk_title"></h3><p class="muted-s" data-i="pk_intro"></p>
       <label class="pk-l" data-i="pk_who"></label><div class="pk-seg" id="pk-who"></div>
@@ -415,21 +476,6 @@ input[type=date],input[type=number],#hs-box textarea,#fq-q{width:100%;font:inher
       <button type="button" class="wa" id="hs-send"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 01-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1121 11.5z"/></svg><span data-i="hs_send"></span></button>
       <p id="hs-msg" class="ai-errline" aria-live="polite"></p>
       <p class="muted-s" data-i="hs_privacy"></p>
-    </div>
-    <div id="ai-unavail" hidden><p data-i="ai_unavail"></p></div>
-    <div id="ai-box" hidden>
-      <h3 class="section-title" style="font-size:19px;margin-top:18px" data-i="ai_chat_h"></h3>
-      <p data-i="ai_intro"></p>
-      <div id="ai-sugg"></div>
-      <div id="ai-log" aria-live="polite"></div>
-      <form id="ai-form"><input id="ai-q" autocomplete="off"><button type="submit" id="ai-send" data-i="ai_send"></button><button type="button" id="ai-stop" hidden data-i="ai_stop"></button></form>
-      <div class="ai-meta"><button type="button" class="linkbtn" id="ai-clear" data-i="ai_clear"></button></div>
-      <div class="block" id="ai-photo" hidden>
-        <h3 data-i="ai_photo_h"></h3><p class="muted-s" data-i="ai_photo_note"></p>
-        <label class="addph" style="margin-top:10px"><span data-i="ai_photo_btn"></span><input type="file" accept="image/*" id="ai-photo-in"></label>
-        <div id="ai-photo-out" class="bubble bot" style="max-width:100%;margin-top:10px;border:0;padding:0" aria-live="polite"></div>
-      </div>
-      <p class="muted-s" data-i="ai_disclaimer"></p>
     </div>
   </section>
   <p class="credit" data-i="credit_long"></p>
@@ -880,7 +926,7 @@ function applyLang(){
   $("#gov-f").innerHTML=`<option value="all">${T("all_gov")}</option>`+Object.entries(GOVS).map(([k,v])=>`<option value="${k}">${v[lang]}</option>`).join("");
   $("#gov-f").value=gcur;
   $("#etiq").innerHTML=T("et").map(x=>`<li>${x}</li>`).join("");
-  renderList(); renderGear(); calc(); if(typeof renderAIStatic==="function") renderAIStatic(); if(typeof renderPicker==="function") renderPicker(); if(typeof renderHost==="function") renderHost(); if(typeof renderFaq==="function") renderFaq(); if(typeof renderCheckin==="function") renderCheckin();
+  renderList(); renderGear(); calc(); if(typeof renderAIStatic==="function") renderAIStatic(); if(typeof renderPicker==="function") renderPicker(); if(typeof renderHost==="function") renderHost(); if(typeof renderFaq==="function") renderFaq(); if(typeof renderCheckin==="function") renderCheckin(); if(typeof renderAIHub==="function" && document.getElementById("aih-engine")) renderAIHub();
   if(currentTrail && $("#v-detail").classList.contains("active")) openTrail(currentTrail,true);
   $("#sos-out").innerHTML="";
 }
@@ -1548,6 +1594,291 @@ function waOpen(url, holder){
     holder.hidden=false;
   }
 }
+
+/* ---------- AI hub: five tools, cloud model when available, otherwise free on-device models ---------- */
+Object.assign(I18N.ar,{aih_title:"المرشد الذكي بالذكاء الاصطناعي",aih_intro:"خمس أدوات ذكية تساعدك قبل الرحلة وأثناءها: التخطيط، والسلامة، والتعرّف على البيئة، والتواصل مع السكان.",
+  aih_cloud:"متصل بنموذج ذكاء اصطناعي سحابي.",aih_dev:"ذكاء اصطناعي يعمل على جهازك: مجاني ودون اشتراك، ويعمل دون إنترنت بعد تحميل النماذج مرة واحدة.",
+  aih_load:"تحميل نماذج الذكاء الاصطناعي (مرة واحدة، نحو 200 ميجابايت)",aih_ready:"النماذج محمّلة وجاهزة، وتعمل دون إنترنت.",aih_loading:"جارٍ تحميل النماذج…",aih_fail:"تعذّر تحميل النماذج الآن. تحتاج إلى إنترنت في أول مرة فقط. حاول مرة أخرى.",
+  aiT:["اسأل المرشد","افحص الطقس والوادي","تعرّف على ما تراه","المترجم الفوري","خطة رحلتي"],
+  aiK:["معالجة اللغة الطبيعية","رؤية حاسوبية","رؤية حاسوبية","ترجمة آلية","نظام خبير"],
+  id_h:"تعرّف على ما تراه",id_note:"صوّر حيوانًا أو حشرة أو نباتًا أو معلمًا، وسيتعرّف عليه الذكاء الاصطناعي ويخبرك إن كان خطرًا وماذا تفعل.",id_btn:"اختر صورة للتعرّف عليها",
+  id_unsure:"لم أتعرّف عليه بثقة كافية. تعامل معه كأنه خطر: لا تلمسه وابتعد عنه.",id_guess:"أقرب احتمال",id_conf:"درجة الثقة",
+  dz:["غير خطر عادةً","انتبه","خطر: ابتعد"],
+  tr_h:"المترجم الفوري",tr_note:"اكتب ما تريد قوله بأي لغة، واختر لغة الشخص الذي تحادثه، ثم اعرض الترجمة له بخط كبير.",tr_to:"ترجم إلى",tr_ph:"مثال: أين أجد ماء للشرب؟",tr_go:"ترجم",tr_near:"أقرب عبارة جاهزة",tr_low:"لم أجد عبارة مطابقة. اختر عبارة من القائمة:",tr_list:"عبارات جاهزة",
+  pl_h:"خطة رحلتي",pl_note:"اختر المسار والتاريخ ووقت الانطلاق ومن معك، وسيبني لك الذكاء الاصطناعي خطة كاملة.",pl_date:"تاريخ الرحلة",pl_time:"وقت الانطلاق من بداية المسار",pl_go:"أنشئ خطتي",
+  pl_tl:"الجدول الزمني",pl_start:"الانطلاق من بداية المسار",pl_turn:"نقطة المنتصف: راجع وقتك وماءك",pl_end:"العودة المتوقعة",pl_sunset:"الغروب",pl_latest:"آخر وقت آمن للانطلاق",
+  pl_water:"الماء",pl_perp:"لتر لكل شخص",pl_gear:"التجهيزات",pl_risks:"أهم المخاطر",pl_ck:"قبل الانطلاق: شغّل «متابعة السلامة» من تبويب الوقت.",pl_multi:"مسار متعدد الأيام: خطط لكل مرحلة على حدة واستعن بمرشد.",
+  pl_off:"هذا الشهر خارج أفضل موسم للمسار.",pl_dark:"ستعود بعد الغروب! انطلق مبكرًا أو اختر المختصر الآمن.",pl_hot:"الحرارة مرتفعة في هذا الشهر: انطلق مع الفجر.",pl_rain:"مسار وادٍ: لا تدخله إذا توقعت الأرصاد أمطارًا.",
+  g:{water:"ماء كافٍ",hat:"قبعة وواقي شمس",aid:"حقيبة إسعافات أولية",phone:"جوال مشحون وبطارية احتياطية",shoes:"حذاء مشي بنعل ثابت",wshoes:"حذاء مائي",dry:"حقيبة مقاومة للماء",lamp:"مصباح رأس",food:"وجبة خفيفة وتمر",warm:"ملابس دافئة وواقية من الرياح",kids:"واقي شمس ووجبات للأطفال"},
+  wx_h:"النتيجة",wx:["يبدو الوضع آمنًا في الصورة، لكن تابع النشرات الرسمية.","كن حذرًا: الرؤية أو الطقس قد يتغيّر.","احذر: توجد علامات مطر أو مياه جارية. ابتعد عن مجرى الوادي.","خطر: غادر مجرى الوادي فورًا إلى مكان مرتفع."],wx_seen:"ما يظهر في الصورة",
+  ai_local_note:"إجابة من قاعدة معرفة التطبيق باستخدام البحث الدلالي على جهازك.",ai_local_trails:"مسارات مناسبة لسؤالك:"});
+Object.assign(I18N.en,{aih_title:"AI smart guide",aih_intro:"Five smart tools for before and during your hike: planning, safety, knowing the nature around you, and talking with locals.",
+  aih_cloud:"Connected to a cloud AI model.",aih_dev:"AI running on your device: free, no subscription, and offline once the models are downloaded.",
+  aih_load:"Download the AI models (once, about 200 MB)",aih_ready:"Models downloaded and ready; they work offline.",aih_loading:"Downloading models…",aih_fail:"Could not download the models now. Internet is needed the first time only. Try again.",
+  aiT:["Ask the guide","Check weather & wadi","Identify what you see","Instant translator","My trip plan"],
+  aiK:["Natural language processing","Computer vision","Computer vision","Machine translation","Expert system"],
+  id_h:"Identify what you see",id_note:"Photograph an animal, insect, plant or landmark, and the AI will identify it and tell you if it is dangerous and what to do.",id_btn:"Choose a photo to identify",
+  id_unsure:"I could not identify it with enough confidence. Treat it as dangerous: do not touch it and keep away.",id_guess:"Closest match",id_conf:"Confidence",
+  dz:["Usually harmless","Be careful","Dangerous: keep away"],
+  tr_h:"Instant translator",tr_note:"Type what you want to say in any language, choose the language of the person you are talking to, then show them the translation in large text.",tr_to:"Translate to",tr_ph:"Example: Where can I find drinking water?",tr_go:"Translate",tr_near:"Closest ready phrase",tr_low:"No matching phrase found. Pick one from the list:",tr_list:"Ready phrases",
+  pl_h:"My trip plan",pl_note:"Choose the trail, date, start time and who is coming, and the AI will build a complete plan.",pl_date:"Trip date",pl_time:"Start time at the trailhead",pl_go:"Build my plan",
+  pl_tl:"Timeline",pl_start:"Start at the trailhead",pl_turn:"Halfway: check your time and water",pl_end:"Expected return",pl_sunset:"Sunset",pl_latest:"Latest safe start",
+  pl_water:"Water",pl_perp:"litres per person",pl_gear:"Gear",pl_risks:"Main risks",pl_ck:"Before you start: turn on “Safety check-in” in the Time tab.",pl_multi:"Multi-day route: plan each stage separately and use a guide.",
+  pl_off:"This month is outside the trail’s best season.",pl_dark:"You would return after sunset! Start earlier or take the safe shortcut.",pl_hot:"It is hot this month: start at dawn.",pl_rain:"Wadi trail: do not enter if rain is forecast.",
+  g:{water:"Enough water",hat:"Hat and sunscreen",aid:"First-aid kit",phone:"Charged phone and power bank",shoes:"Hiking shoes with good grip",wshoes:"Water shoes",dry:"Dry bag",lamp:"Head torch",food:"Snacks and dates",warm:"Warm, windproof layers",kids:"Sun protection and snacks for children"},
+  wx_h:"Result",wx:["The photo looks safe, but keep following official forecasts.","Be careful: visibility or weather may change.","Warning: signs of rain or flowing water. Keep away from the wadi bed.","Danger: leave the wadi bed now for higher ground."],wx_seen:"What the photo shows",
+  ai_local_note:"Answer from the app’s knowledge base using semantic search on your device.",ai_local_trails:"Trails that match your question:"});
+Object.assign(I18N.de,{aih_title:"KI-Guide",aih_intro:"Fünf smarte Werkzeuge vor und während der Tour: Planung, Sicherheit, Natur erkennen und mit Einheimischen sprechen.",
+  aih_cloud:"Mit einem Cloud-KI-Modell verbunden.",aih_dev:"KI auf deinem Gerät: kostenlos, ohne Abo und nach einmaligem Download auch offline.",
+  aih_load:"KI-Modelle herunterladen (einmalig, ca. 200 MB)",aih_ready:"Modelle geladen und bereit; sie funktionieren offline.",aih_loading:"Modelle werden geladen…",aih_fail:"Die Modelle konnten gerade nicht geladen werden. Internet wird nur beim ersten Mal gebraucht. Versuche es erneut.",
+  aiT:["Frag den Guide","Wetter & Wadi prüfen","Erkennen, was du siehst","Sofort-Übersetzer","Mein Tourplan"],
+  aiK:["Sprachverarbeitung","Computer Vision","Computer Vision","Maschinelle Übersetzung","Expertensystem"],
+  id_h:"Erkennen, was du siehst",id_note:"Fotografiere ein Tier, Insekt, eine Pflanze oder ein Wahrzeichen; die KI erkennt es und sagt dir, ob es gefährlich ist und was zu tun ist.",id_btn:"Foto zum Erkennen wählen",
+  id_unsure:"Nicht sicher erkannt. Behandle es als gefährlich: nicht berühren und Abstand halten.",id_guess:"Nächste Übereinstimmung",id_conf:"Sicherheit",
+  dz:["Meist harmlos","Vorsicht","Gefährlich: Abstand halten"],
+  tr_h:"Sofort-Übersetzer",tr_note:"Schreib in beliebiger Sprache, was du sagen willst, wähle die Sprache deines Gegenübers und zeig ihm die Übersetzung in großer Schrift.",tr_to:"Übersetzen in",tr_ph:"Beispiel: Wo finde ich Trinkwasser?",tr_go:"Übersetzen",tr_near:"Nächster fertiger Satz",tr_low:"Kein passender Satz gefunden. Wähle einen aus der Liste:",tr_list:"Fertige Sätze",
+  pl_h:"Mein Tourplan",pl_note:"Wähle Weg, Datum, Startzeit und Begleitung, und die KI erstellt einen vollständigen Plan.",pl_date:"Datum",pl_time:"Startzeit am Einstieg",pl_go:"Plan erstellen",
+  pl_tl:"Zeitplan",pl_start:"Start am Einstieg",pl_turn:"Halbzeit: Zeit und Wasser prüfen",pl_end:"Geplante Rückkehr",pl_sunset:"Sonnenuntergang",pl_latest:"Spätester sicherer Start",
+  pl_water:"Wasser",pl_perp:"Liter pro Person",pl_gear:"Ausrüstung",pl_risks:"Wichtigste Risiken",pl_ck:"Vor dem Start: „Sicherheits-Check-in“ im Tab Zeit aktivieren.",pl_multi:"Mehrtägige Route: plane jede Etappe einzeln und nimm einen Führer.",
+  pl_off:"Dieser Monat liegt außerhalb der besten Saison.",pl_dark:"Du kämst nach Sonnenuntergang zurück! Früher starten oder die sichere Abkürzung nehmen.",pl_hot:"In diesem Monat ist es heiß: bei Tagesanbruch starten.",pl_rain:"Wadi-Weg: nicht betreten, wenn Regen vorhergesagt ist.",
+  g:{water:"Genug Wasser",hat:"Hut und Sonnenschutz",aid:"Erste-Hilfe-Set",phone:"Geladenes Handy und Powerbank",shoes:"Wanderschuhe mit gutem Profil",wshoes:"Wasserschuhe",dry:"Wasserdichter Beutel",lamp:"Stirnlampe",food:"Snacks und Datteln",warm:"Warme, winddichte Kleidung",kids:"Sonnenschutz und Snacks für Kinder"},
+  wx_h:"Ergebnis",wx:["Das Foto wirkt sicher, aber verfolge die offiziellen Vorhersagen.","Vorsicht: Sicht oder Wetter können sich ändern.","Achtung: Anzeichen von Regen oder fließendem Wasser. Halte dich vom Wadi-Bett fern.","Gefahr: Verlasse das Wadi-Bett sofort und geh auf höheres Gelände."],wx_seen:"Was das Foto zeigt",
+  ai_local_note:"Antwort aus der Wissensbasis der App per semantischer Suche auf deinem Gerät.",ai_local_trails:"Passende Wege:"});
+Object.assign(I18N.fr,{aih_title:"Guide intelligent (IA)",aih_intro:"Cinq outils intelligents avant et pendant la randonnée : planification, sécurité, découverte de la nature et échanges avec les habitants.",
+  aih_cloud:"Connecté à un modèle d’IA en ligne.",aih_dev:"IA sur votre appareil : gratuite, sans abonnement et hors ligne après un seul téléchargement des modèles.",
+  aih_load:"Télécharger les modèles d’IA (une fois, environ 200 Mo)",aih_ready:"Modèles téléchargés et prêts ; ils fonctionnent hors ligne.",aih_loading:"Téléchargement des modèles…",aih_fail:"Impossible de télécharger les modèles pour le moment. Internet n’est nécessaire que la première fois. Réessayez.",
+  aiT:["Interroger le guide","Vérifier météo et wadi","Identifier ce que je vois","Traducteur instantané","Mon plan de sortie"],
+  aiK:["Traitement du langage","Vision par ordinateur","Vision par ordinateur","Traduction automatique","Système expert"],
+  id_h:"Identifier ce que je vois",id_note:"Photographiez un animal, un insecte, une plante ou un monument : l’IA l’identifie et vous dit s’il est dangereux et quoi faire.",id_btn:"Choisir une photo à identifier",
+  id_unsure:"Identification incertaine. Considérez-le comme dangereux : ne le touchez pas et éloignez-vous.",id_guess:"Correspondance la plus proche",id_conf:"Confiance",
+  dz:["Généralement inoffensif","Prudence","Dangereux : éloignez-vous"],
+  tr_h:"Traducteur instantané",tr_note:"Écrivez dans n’importe quelle langue, choisissez la langue de votre interlocuteur et montrez-lui la traduction en grand.",tr_to:"Traduire en",tr_ph:"Exemple : Où trouver de l’eau potable ?",tr_go:"Traduire",tr_near:"Phrase prête la plus proche",tr_low:"Aucune phrase correspondante. Choisissez-en une dans la liste :",tr_list:"Phrases prêtes",
+  pl_h:"Mon plan de sortie",pl_note:"Choisissez le sentier, la date, l’heure de départ et vos accompagnants : l’IA construit un plan complet.",pl_date:"Date",pl_time:"Heure de départ au sentier",pl_go:"Créer mon plan",
+  pl_tl:"Horaire",pl_start:"Départ du sentier",pl_turn:"Mi-parcours : vérifiez l’heure et l’eau",pl_end:"Retour prévu",pl_sunset:"Coucher du soleil",pl_latest:"Dernier départ sûr",
+  pl_water:"Eau",pl_perp:"litres par personne",pl_gear:"Équipement",pl_risks:"Principaux risques",pl_ck:"Avant de partir : activez le « Suivi de sécurité » dans l’onglet Durée.",pl_multi:"Itinéraire de plusieurs jours : planifiez chaque étape et prenez un guide.",
+  pl_off:"Ce mois est hors de la meilleure saison du sentier.",pl_dark:"Vous rentreriez après le coucher du soleil ! Partez plus tôt ou prenez le raccourci sûr.",pl_hot:"Il fait chaud ce mois-ci : partez à l’aube.",pl_rain:"Sentier de wadi : n’y entrez pas si de la pluie est prévue.",
+  g:{water:"Assez d’eau",hat:"Chapeau et crème solaire",aid:"Trousse de secours",phone:"Téléphone chargé et batterie externe",shoes:"Chaussures de randonnée adhérentes",wshoes:"Chaussures d’eau",dry:"Sac étanche",lamp:"Lampe frontale",food:"En-cas et dattes",warm:"Vêtements chauds et coupe-vent",kids:"Protection solaire et en-cas pour les enfants"},
+  wx_h:"Résultat",wx:["La photo semble sûre, mais suivez les prévisions officielles.","Prudence : la visibilité ou la météo peut changer.","Attention : signes de pluie ou d’eau courante. Éloignez-vous du lit du wadi.","Danger : quittez immédiatement le lit du wadi vers un terrain en hauteur."],wx_seen:"Ce que montre la photo",
+  ai_local_note:"Réponse issue de la base de connaissances de l’application par recherche sémantique sur votre appareil.",ai_local_trails:"Sentiers adaptés :"});
+Object.assign(I18N.ru,{aih_title:"Умный гид (ИИ)",aih_intro:"Пять умных инструментов до и во время похода: планирование, безопасность, знакомство с природой и общение с местными жителями.",
+  aih_cloud:"Подключено к облачной модели ИИ.",aih_dev:"ИИ работает на вашем устройстве: бесплатно, без подписки и без интернета после однократной загрузки моделей.",
+  aih_load:"Загрузить модели ИИ (один раз, около 200 МБ)",aih_ready:"Модели загружены и готовы; работают без интернета.",aih_loading:"Загрузка моделей…",aih_fail:"Не удалось загрузить модели. Интернет нужен только в первый раз. Попробуйте снова.",
+  aiT:["Спросить гида","Проверить погоду и вади","Что я вижу?","Мгновенный переводчик","Мой план похода"],
+  aiK:["Обработка языка","Компьютерное зрение","Компьютерное зрение","Машинный перевод","Экспертная система"],
+  id_h:"Что я вижу?",id_note:"Сфотографируйте животное, насекомое, растение или объект — ИИ определит его и скажет, опасно ли это и что делать.",id_btn:"Выбрать фото для распознавания",
+  id_unsure:"Не удалось уверенно определить. Считайте это опасным: не трогайте и держитесь подальше.",id_guess:"Ближайшее совпадение",id_conf:"Уверенность",
+  dz:["Обычно безопасно","Осторожно","Опасно: держитесь подальше"],
+  tr_h:"Мгновенный переводчик",tr_note:"Напишите фразу на любом языке, выберите язык собеседника и покажите ему перевод крупным шрифтом.",tr_to:"Перевести на",tr_ph:"Например: Где найти питьевую воду?",tr_go:"Перевести",tr_near:"Ближайшая готовая фраза",tr_low:"Подходящая фраза не найдена. Выберите из списка:",tr_list:"Готовые фразы",
+  pl_h:"Мой план похода",pl_note:"Выберите маршрут, дату, время старта и спутников — ИИ составит полный план.",pl_date:"Дата похода",pl_time:"Время старта на тропе",pl_go:"Составить план",
+  pl_tl:"Расписание",pl_start:"Старт на тропе",pl_turn:"Половина пути: проверьте время и воду",pl_end:"Ожидаемое возвращение",pl_sunset:"Закат",pl_latest:"Последний безопасный старт",
+  pl_water:"Вода",pl_perp:"л на человека",pl_gear:"Снаряжение",pl_risks:"Главные риски",pl_ck:"Перед выходом включите «Контроль безопасности» во вкладке «Время».",pl_multi:"Многодневный маршрут: планируйте каждый этап отдельно и возьмите гида.",
+  pl_off:"Этот месяц не лучший сезон для маршрута.",pl_dark:"Вы вернётесь после заката! Выходите раньше или выберите безопасный срез.",pl_hot:"В этом месяце жарко: выходите на рассвете.",pl_rain:"Маршрут по вади: не заходите, если ожидается дождь.",
+  g:{water:"Достаточно воды",hat:"Шляпа и солнцезащитный крем",aid:"Аптечка",phone:"Заряженный телефон и пауэрбанк",shoes:"Треккинговая обувь с хорошим протектором",wshoes:"Обувь для воды",dry:"Гермомешок",lamp:"Налобный фонарь",food:"Перекус и финики",warm:"Тёплая ветрозащитная одежда",kids:"Защита от солнца и перекус для детей"},
+  wx_h:"Результат",wx:["На фото всё выглядит безопасно, но следите за официальными прогнозами.","Осторожно: видимость или погода могут измениться.","Внимание: признаки дождя или текущей воды. Держитесь подальше от русла вади.","Опасно: немедленно покиньте русло вади и поднимитесь выше."],wx_seen:"Что видно на фото",
+  ai_local_note:"Ответ из базы знаний приложения с помощью семантического поиска на вашем устройстве.",ai_local_trails:"Подходящие маршруты:"});
+
+/* ---------- knowledge for on-device vision ---------- */
+const WX_LABELS=[
+ ["dark storm clouds over mountains",2,{ar:"غيوم ركامية داكنة فوق الجبال",en:"Dark storm clouds over the mountains",de:"Dunkle Gewitterwolken über den Bergen",fr:"Nuages d’orage sombres sur les montagnes",ru:"Тёмные грозовые тучи над горами"}],
+ ["heavy rain falling",2,{ar:"مطر غزير",en:"Heavy rain",de:"Starker Regen",fr:"Forte pluie",ru:"Сильный дождь"}],
+ ["lightning in a stormy sky",3,{ar:"برق في سماء عاصفة",en:"Lightning in a stormy sky",de:"Blitze am Gewitterhimmel",fr:"Éclairs dans un ciel orageux",ru:"Молнии в грозовом небе"}],
+ ["a flash flood of fast brown muddy water in a valley",3,{ar:"سيل من مياه بنية عكرة سريعة في الوادي",en:"A flash flood of fast, muddy water in the valley",de:"Sturzflut mit schnellem, schlammigem Wasser im Tal",fr:"Crue éclair d’eau boueuse rapide dans la vallée",ru:"Паводок: быстрая мутная вода в долине"}],
+ ["a stream of flowing water in a rocky valley",2,{ar:"مياه جارية في مجرى صخري",en:"Flowing water in a rocky valley",de:"Fließendes Wasser in einem felsigen Tal",fr:"Eau courante dans une vallée rocheuse",ru:"Текущая вода в скалистой долине"}],
+ ["fog or mist on a mountain",1,{ar:"ضباب على الجبل",en:"Fog on the mountain",de:"Nebel am Berg",fr:"Brouillard sur la montagne",ru:"Туман в горах"}],
+ ["a clear blue sky over mountains",0,{ar:"سماء زرقاء صافية فوق الجبال",en:"A clear blue sky over the mountains",de:"Klarer blauer Himmel über den Bergen",fr:"Ciel bleu dégagé sur les montagnes",ru:"Ясное голубое небо над горами"}],
+ ["white fluffy clouds in a blue sky",0,{ar:"غيوم بيضاء خفيفة في سماء زرقاء",en:"Light white clouds in a blue sky",de:"Leichte weiße Wolken am blauen Himmel",fr:"Petits nuages blancs dans un ciel bleu",ru:"Лёгкие белые облака на голубом небе"}],
+ ["a dry rocky riverbed",0,{ar:"مجرى وادٍ جاف",en:"A dry wadi bed",de:"Trockenes Wadi-Bett",fr:"Lit de wadi sec",ru:"Сухое русло вади"}],
+ ["a calm clear turquoise pool in a canyon",0,{ar:"بركة صافية هادئة في الوادي",en:"A calm, clear pool in the canyon",de:"Ruhiges, klares Becken in der Schlucht",fr:"Bassin calme et limpide dans le canyon",ru:"Спокойное прозрачное озерцо в каньоне"}]];
+const WILD=[
+ ["a snake",2,{ar:"ثعبان",en:"Snake",de:"Schlange",fr:"Serpent",ru:"Змея"},{ar:"بعض ثعابين عُمان سامة. ابتعد ببطء ولا تحاول الإمساك به. إن لُدغت: ابقَ هادئًا، وثبّت الطرف المصاب، ولا تجرح مكان اللدغة، واتصل فورًا بالرقم 9999.",en:"Some snakes in Oman are venomous. Back away slowly and never try to catch it. If bitten: stay calm, keep the limb still, do not cut the wound, and call 9999 immediately.",de:"Einige Schlangen in Oman sind giftig. Langsam zurückweichen, nie anfassen. Bei einem Biss: ruhig bleiben, Glied ruhigstellen, Wunde nicht einschneiden, sofort 9999 anrufen.",fr:"Certains serpents d’Oman sont venimeux. Reculez lentement et n’essayez jamais de l’attraper. En cas de morsure : restez calme, immobilisez le membre, n’incisez pas la plaie et appelez le 9999.",ru:"Некоторые змеи Омана ядовиты. Медленно отойдите и не пытайтесь поймать. При укусе: сохраняйте спокойствие, обездвижьте конечность, не надрезайте рану и сразу звоните 9999."}],
+ ["a scorpion",2,{ar:"عقرب",en:"Scorpion",de:"Skorpion",fr:"Scorpion",ru:"Скорпион"},{ar:"لسعة بعض العقارب خطرة، خاصة على الأطفال. لا تقلب الحجارة بيديك، وانفض حذاءك قبل لبسه. عند اللسع: ضع كمادة باردة واتصل بالرقم 9999.",en:"Some scorpion stings are dangerous, especially for children. Do not turn stones over with your hands and shake out your shoes. If stung: apply a cold pack and call 9999.",de:"Manche Skorpionstiche sind gefährlich, besonders für Kinder. Keine Steine mit bloßen Händen umdrehen, Schuhe ausschütteln. Bei Stich: kühlen und 9999 anrufen.",fr:"Certaines piqûres sont dangereuses, surtout pour les enfants. Ne retournez pas les pierres à mains nues et secouez vos chaussures. En cas de piqûre : froid et appel au 9999.",ru:"Укусы некоторых скорпионов опасны, особенно для детей. Не переворачивайте камни руками, вытряхивайте обувь. При укусе: холод и звонок 9999."}],
+ ["a camel spider solifuge",1,{ar:"عنكبوت الجمل",en:"Camel spider",de:"Walzenspinne",fr:"Solifuge (araignée-chameau)",ru:"Сольпуга (фаланга)"},{ar:"غير سام، لكن عضته مؤلمة. لا تلمسه واتركه يبتعد.",en:"Not venomous, but its bite is painful. Do not touch it; let it move away.",de:"Nicht giftig, aber der Biss schmerzt. Nicht anfassen, weglaufen lassen.",fr:"Non venimeux, mais sa morsure est douloureuse. Ne le touchez pas.",ru:"Не ядовита, но кусается болезненно. Не трогайте её."}],
+ ["a bee or a wasp",1,{ar:"نحلة أو دبور",en:"Bee or wasp",de:"Biene oder Wespe",fr:"Abeille ou guêpe",ru:"Пчела или оса"},{ar:"ابتعد بهدوء عن الخلية. من لديه حساسية من اللسع يحمل علاجه دائمًا ويتصل بالرقم 9999 عند التورم الشديد.",en:"Move calmly away from the nest. People allergic to stings should carry their medicine and call 9999 if swelling is severe.",de:"Ruhig vom Nest entfernen. Allergiker tragen ihr Notfallmedikament und rufen bei starker Schwellung 9999.",fr:"Éloignez-vous calmement du nid. Les allergiques gardent leur traitement et appellent le 9999 en cas de gonflement important.",ru:"Спокойно отойдите от гнезда. Аллергикам — иметь при себе лекарство и звонить 9999 при сильном отёке."}],
+ ["a lizard",0,{ar:"سحلية",en:"Lizard",de:"Eidechse",fr:"Lézard",ru:"Ящерица"},{ar:"غير خطرة عادةً. راقبها من بعيد ولا تحاول الإمساك بها.",en:"Usually harmless. Watch from a distance and do not try to catch it.",de:"Meist harmlos. Aus der Ferne beobachten, nicht fangen.",fr:"Généralement inoffensif. Observez de loin sans l’attraper.",ru:"Обычно безопасна. Наблюдайте издалека, не ловите."}],
+ ["a wild mountain goat on rocks",0,{ar:"وعل أو ماعز جبلي",en:"Wild mountain goat",de:"Wilde Bergziege",fr:"Chèvre sauvage de montagne",ru:"Горный козёл"},{ar:"قد يكون الطهر العربي النادر والمحمي في جبال الحجر. لا تطارده ولا تطعمه، وصوّره من بعيد.",en:"It may be the rare, protected Arabian tahr of the Hajar Mountains. Do not chase or feed it; photograph it from afar.",de:"Möglicherweise der seltene, geschützte Arabische Tahr des Hadschar-Gebirges. Nicht jagen oder füttern, nur aus der Ferne fotografieren.",fr:"Peut-être le rare tahr d’Arabie, protégé, des monts Hajar. Ne le poursuivez pas et ne le nourrissez pas.",ru:"Возможно, редкий охраняемый аравийский тар гор Хаджар. Не преследуйте и не кормите его."}],
+ ["a camel",0,{ar:"جمل",en:"Camel",de:"Kamel",fr:"Dromadaire",ru:"Верблюд"},{ar:"غالبًا يملكه أحد السكان. لا تقترب من الخلف، وخفّف السرعة إن رأيته على الطريق.",en:"Usually owned by locals. Do not approach from behind, and slow down if you see one on the road.",de:"Meist im Besitz von Einheimischen. Nicht von hinten nähern; auf der Straße langsam fahren.",fr:"Appartient souvent aux habitants. Ne l’approchez pas par derrière ; ralentissez sur la route.",ru:"Обычно принадлежит местным. Не подходите сзади; на дороге сбавьте скорость."}],
+ ["a donkey",0,{ar:"حمار",en:"Donkey",de:"Esel",fr:"Âne",ru:"Осёл"},{ar:"تُستخدم الحمير قديمًا لنقل الأحمال في الجبال. لا تطعمها ولا تقف خلفها.",en:"Donkeys have long carried loads in the mountains. Do not feed them or stand behind them.",de:"Esel tragen seit jeher Lasten in den Bergen. Nicht füttern, nicht dahinter stehen.",fr:"Les ânes portent des charges dans les montagnes. Ne les nourrissez pas, ne restez pas derrière.",ru:"Ослы издавна носят грузы в горах. Не кормите их и не стойте сзади."}],
+ ["a large bird of prey such as an eagle or vulture",0,{ar:"طائر جارح (نسر أو عقاب)",en:"Bird of prey (eagle or vulture)",de:"Greifvogel (Adler oder Geier)",fr:"Rapace (aigle ou vautour)",ru:"Хищная птица (орёл или гриф)"},{ar:"تعيش في الجبال العمانية طيور جارحة نادرة مثل النسر المصري. لا تقترب من أعشاشها.",en:"Rare birds of prey such as the Egyptian vulture live in Oman’s mountains. Keep away from nests.",de:"In Omans Bergen leben seltene Greifvögel wie der Schmutzgeier. Nester meiden.",fr:"Des rapaces rares comme le vautour percnoptère vivent dans les montagnes d’Oman. Évitez les nids.",ru:"В горах Омана живут редкие хищные птицы, например стервятник. Не приближайтесь к гнёздам."}],
+ ["a frog or a toad",0,{ar:"ضفدع",en:"Frog or toad",de:"Frosch oder Kröte",fr:"Grenouille ou crapaud",ru:"Лягушка или жаба"},{ar:"وجوده علامة على مياه دائمة. لا تلوّث الماء ولا تنقل الضفادع.",en:"A sign of permanent water. Do not pollute the water or move the frogs.",de:"Zeichen für dauerhaftes Wasser. Wasser nicht verschmutzen, Frösche nicht umsetzen.",fr:"Signe d’eau permanente. Ne polluez pas l’eau et ne déplacez pas les grenouilles.",ru:"Признак постоянной воды. Не загрязняйте воду и не переносите лягушек."}],
+ ["a thorny acacia tree",1,{ar:"شجرة السمر (أكاسيا)",en:"Acacia tree",de:"Akazie",fr:"Acacia",ru:"Акация"},{ar:"أشواكها حادة وطويلة. انتبه لعينيك ويديك، ويمكن الاستظلال بها بحذر.",en:"Its thorns are long and sharp. Protect your eyes and hands; it can give shade if you are careful.",de:"Lange, spitze Dornen. Augen und Hände schützen; spendet vorsichtig genutzt Schatten.",fr:"Épines longues et acérées. Protégez yeux et mains ; il offre de l’ombre avec prudence.",ru:"Длинные острые шипы. Берегите глаза и руки; в тени можно укрыться осторожно."}],
+ ["a shrub with large grey-green leaves and purple flowers, Calotropis procera",2,{ar:"نبات العُشَر",en:"Sodom apple (Calotropis)",de:"Oscher (Calotropis)",fr:"Pommier de Sodome (Calotropis)",ru:"Калотропис"},{ar:"عصارته الحليبية سامة ومهيّجة للعين والجلد. لا تكسر أوراقه، واغسل يديك وعينيك بالماء إن لامسته.",en:"Its milky sap is toxic and irritates eyes and skin. Do not break the leaves; rinse with water if you touch it.",de:"Der Milchsaft ist giftig und reizt Augen und Haut. Blätter nicht abbrechen; bei Kontakt mit Wasser spülen.",fr:"Sa sève laiteuse est toxique et irrite yeux et peau. Ne cassez pas les feuilles ; rincez à l’eau en cas de contact.",ru:"Млечный сок ядовит и раздражает глаза и кожу. Не ломайте листья; при контакте промойте водой."}],
+ ["an oleander shrub with pink flowers",2,{ar:"الدفلى",en:"Oleander",de:"Oleander",fr:"Laurier-rose",ru:"Олеандр"},{ar:"كل أجزائها سامة جدًا إذا أُكلت. لا تقطف منها ولا تستخدم أغصانها للشواء.",en:"All parts are highly toxic if eaten. Do not pick it or use its branches for grilling.",de:"Alle Teile sind beim Verzehr hochgiftig. Nicht pflücken, Zweige nicht zum Grillen verwenden.",fr:"Toutes ses parties sont très toxiques si ingérées. Ne la cueillez pas, n’utilisez pas ses branches pour griller.",ru:"Все части очень ядовиты при проглатывании. Не срывайте и не используйте ветки для жарки."}],
+ ["a date palm tree",0,{ar:"نخلة",en:"Date palm",de:"Dattelpalme",fr:"Palmier dattier",ru:"Финиковая пальма"},{ar:"رمز الواحات العمانية. النخيل في القرى ملك لأهلها، فلا تقطف التمر دون إذن.",en:"A symbol of Oman’s oases. Village palms are private property: do not pick dates without permission.",de:"Symbol der omanischen Oasen. Palmen im Dorf sind Privatbesitz: keine Datteln ohne Erlaubnis pflücken.",fr:"Symbole des oasis d’Oman. Les palmiers des villages sont privés : pas de cueillette sans permission.",ru:"Символ оазисов Омана. Пальмы в деревнях частные: не срывайте финики без разрешения."}],
+ ["a frankincense tree Boswellia",0,{ar:"شجرة اللبان",en:"Frankincense tree",de:"Weihrauchbaum",fr:"Arbre à encens",ru:"Ладанное дерево"},{ar:"من أشهر رموز ظفار ومسجلة ضمن تراث اليونسكو. لا تجرح ساقها ولا تأخذ من صمغها.",en:"A famous symbol of Dhofar, part of a UNESCO World Heritage site. Do not cut the bark or take its resin.",de:"Berühmtes Symbol Dhofars und Teil eines UNESCO-Welterbes. Rinde nicht verletzen, kein Harz nehmen.",fr:"Symbole du Dhofar, inscrit au patrimoine mondial de l’UNESCO. N’entaillez pas l’écorce.",ru:"Символ Дофара, объект Всемирного наследия ЮНЕСКО. Не надрезайте кору и не берите смолу."}],
+ ["a falaj irrigation water channel",0,{ar:"فلج",en:"Falaj irrigation channel",de:"Falaj-Bewässerungskanal",fr:"Canal d’irrigation falaj",ru:"Оросительный канал фаладж"},{ar:"نظام ري عماني قديم مسجل في اليونسكو، وماؤه لشرب أهل القرية وريّهم. لا تسبح فيه ولا تلوّثه.",en:"An ancient Omani irrigation system on the UNESCO list; villagers drink and irrigate from it. Do not swim in it or pollute it.",de:"Altes omanisches Bewässerungssystem (UNESCO); die Dorfbewohner trinken daraus. Nicht darin baden oder es verschmutzen.",fr:"Ancien système d’irrigation omanais classé à l’UNESCO ; les villageois en boivent. Ne vous y baignez pas.",ru:"Древняя оманская система орошения (ЮНЕСКО); из неё пьют жители. Не купайтесь и не загрязняйте."}],
+ ["ruins of an old abandoned stone village",0,{ar:"أطلال قرية حجرية قديمة",en:"Ruins of an old stone village",de:"Ruinen eines alten Steindorfs",fr:"Ruines d’un ancien village de pierre",ru:"Руины старой каменной деревни"},{ar:"جزء من تراث عُمان. لا تتسلق الجدران المتهالكة ولا تأخذ أي شيء منها.",en:"Part of Oman’s heritage. Do not climb crumbling walls or take anything.",de:"Teil des omanischen Erbes. Keine bröckelnden Mauern besteigen, nichts mitnehmen.",fr:"Patrimoine d’Oman. Ne grimpez pas sur les murs fragiles et n’emportez rien.",ru:"Часть наследия Омана. Не лазайте по ветхим стенам и ничего не берите."}]];
+/* ready phrases for the offline translator */
+const PHRASES=[
+ {ar:"السلام عليكم",en:"Hello (peace be upon you)",de:"Hallo, Friede sei mit Ihnen",fr:"Bonjour, que la paix soit sur vous",ru:"Здравствуйте, мир вам"},
+ {ar:"شكرًا جزيلًا",en:"Thank you very much",de:"Vielen Dank",fr:"Merci beaucoup",ru:"Большое спасибо"},
+ {ar:"أين أجد ماء للشرب؟",en:"Where can I find drinking water?",de:"Wo finde ich Trinkwasser?",fr:"Où puis-je trouver de l’eau potable ?",ru:"Где найти питьевую воду?"},
+ {ar:"أين بداية المسار؟",en:"Where does the trail start?",de:"Wo beginnt der Wanderweg?",fr:"Où commence le sentier ?",ru:"Где начало тропы?"},
+ {ar:"هل هذا الطريق إلى القرية؟",en:"Is this the way to the village?",de:"Ist das der Weg zum Dorf?",fr:"Est-ce le chemin du village ?",ru:"Это дорога в деревню?"},
+ {ar:"كم يبعد المكان من هنا؟",en:"How far is it from here?",de:"Wie weit ist es von hier?",fr:"C’est à quelle distance d’ici ?",ru:"Как далеко отсюда?"},
+ {ar:"أنا تائه، هل يمكنك مساعدتي؟",en:"I am lost, can you help me?",de:"Ich habe mich verlaufen, können Sie mir helfen?",fr:"Je suis perdu, pouvez-vous m’aider ?",ru:"Я заблудился, вы можете помочь?"},
+ {ar:"أحتاج إلى مساعدة طبية",en:"I need medical help",de:"Ich brauche medizinische Hilfe",fr:"J’ai besoin d’aide médicale",ru:"Мне нужна медицинская помощь"},
+ {ar:"من فضلك اتصل بالرقم 9999",en:"Please call 9999",de:"Bitte rufen Sie 9999 an",fr:"Appelez le 9999, s’il vous plaît",ru:"Пожалуйста, позвоните 9999"},
+ {ar:"صديقي مصاب",en:"My friend is injured",de:"Mein Freund ist verletzt",fr:"Mon ami est blessé",ru:"Мой друг ранен"},
+ {ar:"هل يُتوقع مطر اليوم؟",en:"Is rain expected today?",de:"Wird heute Regen erwartet?",fr:"De la pluie est-elle prévue aujourd’hui ?",ru:"Сегодня ожидается дождь?"},
+ {ar:"هل الوادي آمن الآن؟",en:"Is the wadi safe now?",de:"Ist das Wadi jetzt sicher?",fr:"Le wadi est-il sûr maintenant ?",ru:"Сейчас в вади безопасно?"},
+ {ar:"هل يمكنني أن أوقف سيارتي هنا؟",en:"Can I park my car here?",de:"Kann ich hier parken?",fr:"Puis-je me garer ici ?",ru:"Можно здесь припарковаться?"},
+ {ar:"هل يمكنني التصوير هنا؟",en:"May I take photos here?",de:"Darf ich hier fotografieren?",fr:"Puis-je prendre des photos ici ?",ru:"Здесь можно фотографировать?"},
+ {ar:"أين أقرب محطة وقود؟",en:"Where is the nearest petrol station?",de:"Wo ist die nächste Tankstelle?",fr:"Où est la station-service la plus proche ?",ru:"Где ближайшая заправка?"},
+ {ar:"أين أجد مطعمًا أو بقالة؟",en:"Where can I find a restaurant or a shop?",de:"Wo finde ich ein Restaurant oder einen Laden?",fr:"Où trouver un restaurant ou une épicerie ?",ru:"Где найти ресторан или магазин?"},
+ {ar:"هل تعرف مرشدًا محليًا؟",en:"Do you know a local guide?",de:"Kennen Sie einen örtlichen Führer?",fr:"Connaissez-vous un guide local ?",ru:"Вы знаете местного гида?"},
+ {ar:"كم أجرة القارب؟",en:"How much is the boat fare?",de:"Wie viel kostet das Boot?",fr:"Combien coûte le bateau ?",ru:"Сколько стоит лодка?"},
+ {ar:"أين دورة المياه؟",en:"Where is the toilet?",de:"Wo ist die Toilette?",fr:"Où sont les toilettes ?",ru:"Где туалет?"},
+ {ar:"نحن مجموعة من أربعة أشخاص",en:"We are a group of four people",de:"Wir sind eine Gruppe von vier Personen",fr:"Nous sommes un groupe de quatre personnes",ru:"Нас группа из четырёх человек"},
+ {ar:"متى يغلق المكان؟",en:"When does this place close?",de:"Wann schließt dieser Ort?",fr:"À quelle heure ça ferme ?",ru:"Когда закрывается это место?"},
+ {ar:"هل الطريق مناسب لسيارة عادية؟",en:"Is the road suitable for a normal car?",de:"Ist die Straße für ein normales Auto geeignet?",fr:"La route convient-elle à une voiture normale ?",ru:"Дорога подходит для обычной машины?"},
+ {ar:"آسف، لا أتكلم العربية",en:"Sorry, I don’t speak Arabic",de:"Entschuldigung, ich spreche kein Arabisch",fr:"Désolé, je ne parle pas arabe",ru:"Извините, я не говорю по-арабски"},
+ {ar:"مرحبًا بكم في عُمان",en:"Welcome to Oman",de:"Willkommen in Oman",fr:"Bienvenue à Oman",ru:"Добро пожаловать в Оман"}];
+
+/* ---------- on-device models (free, open source; cached by the browser after the first download) ---------- */
+const TJS_URL="https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1";
+let _tjs=null,_emb=null,_clip=null,_embCache={};
+function aiProg(el){ const files={}; return p=>{ if(!el||!p||p.status!=="progress"||!p.total) return; files[p.file]=[p.loaded,p.total]; let a=0,b=0; Object.values(files).forEach(([x,y])=>{a+=x;b+=y;}); el.textContent=`${T("aih_loading")} ${Math.round(a/b*100)}%`; }; }
+async function tjs(){ if(!_tjs){ _tjs=await import(TJS_URL); try{ _tjs.env.allowLocalModels=false; }catch(e){} } return _tjs; }
+async function getEmb(pel){ if(!_emb){ const m=await tjs(); _emb=await m.pipeline("feature-extraction","Xenova/paraphrase-multilingual-MiniLM-L12-v2",{progress_callback:aiProg(pel)}); } return _emb; }
+async function getClip(pel){ if(!_clip){ const m=await tjs(); _clip=await m.pipeline("zero-shot-image-classification","Xenova/clip-vit-base-patch32",{progress_callback:aiProg(pel)}); } return _clip; }
+async function embed(texts,pel){ const e=await getEmb(pel); const out=await e(texts,{pooling:"mean",normalize:true}); return out.tolist(); }
+async function embedCached(key,texts,pel){ if(!_embCache[key]) _embCache[key]=await embed(texts,pel); return _embCache[key]; }
+const dot=(a,b)=>{ let s=0; for(let i=0;i<a.length;i++) s+=a[i]*b[i]; return s; };
+function aiLocalFail(el,e){ el.innerHTML=`<p class="ai-errline">${esc(T("aih_fail"))}</p>`; renderAIHub(); }
+
+/* chat: semantic search over the app knowledge base */
+function kbItems(){ const it=[];
+  FAQ.forEach(f=>it.push({t:"faq",f,text:L(f.q)+" "+L(f.a)}));
+  TRAILS.forEach(t=>it.push({t:"trail",id:t.id,text:[L(t.name),L(t.region),L(t.about),T(t.lvl),L(t.season),t.wadi?T("f_wadi"):"",t.family?T("f_family"):""].join(". ")}));
+  return it; }
+async function localAsk(q){
+  q=(q||"").trim(); if(!q||aiBusy) return; aiBusy=true; $("#ai-q").value="";
+  addBubble("user",`<p>${esc(q)}</p>`); const out=addBubble("bot",`<p class="thinking">${T("ai_thinking")}</p>`);
+  try{
+    const items=kbItems(); const kv=await embedCached("kb_"+lang,items.map(i=>i.text),out.querySelector("p"));
+    const [qv]=await embed([q]);
+    const sc=items.map((it,i)=>({it,s:dot(qv,kv[i])})).sort((a,b)=>b.s-a.s);
+    const faq=sc.find(x=>x.it.t==="faq"), trails=sc.filter(x=>x.it.t==="trail").slice(0,3);
+    let h="";
+    if(faq && faq.s>=0.5 && faq.s>=trails[0].s-0.05) h+=`<p><b>${esc(L(faq.it.f.q))}</b></p><p>${esc(L(faq.it.f.a))}</p>`;
+    h+=`<p><b>${esc(T("ai_local_trails"))}</b></p><ul>`+trails.map(x=>{const t=TRAILS.find(y=>y.id===x.it.id);return `<li><button class="ai-trail" data-id="${t.id}">${esc(L(t.name))}</button> — ${esc(T(t.lvl))} · ${esc(L(t.season))}. ⚠ ${esc(L(t.hazards).split(/[.。]/)[0])}.</li>`;}).join("")+`</ul>`;
+    h+=`<p class="muted-s">${esc(T("ai_local_note"))}</p>`;
+    out.innerHTML=h; wireTrailButtons(out);
+  }catch(e){ aiLocalFail(out,e); }
+  finally{ aiBusy=false; }
+}
+/* weather & wadi photo: zero-shot image classification */
+async function localWeather(f,out){
+  out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
+  try{ const clf=await getClip(out.querySelector("p")); const url=URL.createObjectURL(f);
+    const r=await clf(url,WX_LABELS.map(x=>x[0])); URL.revokeObjectURL(url);
+    const by=Object.fromEntries(r.map(x=>[x.label,x.score]));
+    let lvl=0; WX_LABELS.forEach(([lab,d])=>{ const s=by[lab]||0; if(s>=0.25&&d>lvl) lvl=d; }); const top=r[0], topD=(WX_LABELS.find(x=>x[0]===top.label)||[])[1]||0; lvl=Math.max(lvl,topD);
+    const seen=r.slice(0,3).map(x=>{const w=WX_LABELS.find(y=>y[0]===x.label);return `<li>${esc(L(w[2]))} <span class="muted-s">(${Math.round(x.score*100)}%)</span></li>`;}).join("");
+    out.innerHTML=`<p><b>${esc(T("wx_seen"))}:</b></p><ul>${seen}</ul><p class="wx-v wx-${lvl}"><b>${esc(T("wx")[lvl])}</b></p><p class="muted-s">${esc(T("ai_disclaimer"))}</p>`;
+  }catch(e){ aiLocalFail(out,e); }
+}
+/* identify: zero-shot image classification + local species database */
+async function localIdentify(f,out){
+  out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
+  try{ const clf=await getClip(out.querySelector("p")); const url=URL.createObjectURL(f);
+    const r=await clf(url,WILD.map(x=>x[0])); URL.revokeObjectURL(url);
+    const top=r[0], w=WILD.find(x=>x[0]===top.label);
+    const conf=`<p class="muted-s">${esc(T("id_conf"))}: ${Math.round(top.score*100)}%</p>`;
+    if(top.score<0.3){ out.innerHTML=`<p class="wx-v wx-2"><b>${esc(T("id_unsure"))}</b></p><p>${esc(T("id_guess"))}: ${esc(L(w[2]))}</p>${conf}`; return; }
+    out.innerHTML=`<p class="id-name">${esc(L(w[2]))} <span class="dz dz-${w[1]}">${esc(T("dz")[w[1]])}</span></p><p>${esc(L(w[3]))}</p>${conf}`;
+  }catch(e){ aiLocalFail(out,e); }
+}
+/* translator: semantic match to ready phrases */
+async function localTranslate(text,to,out){
+  out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
+  try{ const LS=["ar","en","de","fr","ru"]; const all=[]; PHRASES.forEach((p,i)=>LS.forEach(l=>all.push({i,t:p[l]})));
+    const pv=await embedCached("phr",all.map(x=>x.t),out.querySelector("p")); const [qv]=await embed([text]);
+    let best={s:-1,i:0}; all.forEach((x,k)=>{ const s=dot(qv,pv[k]); if(s>best.s) best={s,i:x.i}; });
+    if(best.s<0.6){ out.innerHTML=`<p>${esc(T("tr_low"))}</p>`; renderPhraseList(to,out); return; }
+    showTranslation(PHRASES[best.i][to],to,out,`${T("tr_near")} · ${Math.round(best.s*100)}%`);
+  }catch(e){ aiLocalFail(out,e); }
+}
+function showTranslation(txt,to,out,meta){ out.innerHTML=`<p class="tr-big" dir="${to==="ar"?"rtl":"ltr"}" lang="${to}">${esc(txt)}</p>${meta?`<p class="muted-s">${esc(meta)}</p>`:""}`; }
+function renderPhraseList(to,out){ const d=document.createElement("div"); d.className="tr-chips";
+  d.innerHTML=PHRASES.map((p,i)=>`<button type="button" class="chip" data-i="${i}">${esc(p[lang])}</button>`).join("");
+  d.querySelectorAll("button").forEach(b=>b.onclick=()=>showTranslation(PHRASES[+b.dataset.i][to],to,out,T("tr_list")));
+  out.append(d); }
+/* trip plan: rule-based expert system (works offline instantly) */
+const MOUNTAIN=["shams","summit","akhdar","habib","bimah","hajar"];
+function heatFactor(t,m){ if(t.id==="darbat") return (m>=6&&m<=8)?1:1.15; if(MOUNTAIN.includes(t.id)) return (m>=5&&m<=8)?1.15:1; if(m>=4&&m<=9) return 1.35; if(m===3||m===10) return 1.15; return 1; }
+function expertPlan(t,dateStr,timeStr,who){
+  const d=dateStr?new Date(dateStr+"T12:00"):new Date(), m=d.getMonth();
+  const [hh,mm]=(timeStr||"06:30").split(":").map(Number), start=hh*60+mm;
+  const fit=who===1?1.25:who===2?0.82:1, heat=heatFactor(t,m);
+  const mins=t.multi?0:baseMinutes(t.km,t.ascent)*fit*heat, end=start+mins, sunset=SUNSET[m];
+  const water=Math.max(1,Math.ceil((mins/60)*(heat>1?0.8:0.5)*2)/2);
+  const g=T("g"), gear=[g.water,g.hat,g.aid,g.phone,g.shoes];
+  if(t.wadi){ gear.push(g.wshoes,g.dry); } if(t.lvl==="hard"||mins>300){ gear.push(g.lamp,g.food); }
+  if(MOUNTAIN.includes(t.id)&&(m>=10||m<=2)) gear.push(g.warm); if(who===1) gear.push(g.kids);
+  const warn=[]; if(!(GOOD_MONTHS[t.id]||[]).includes(m)) warn.push(T("pl_off")); if(!t.multi&&end>sunset-30) warn.push(T("pl_dark")); if(heat>=1.35) warn.push(T("pl_hot")); if(t.wadi) warn.push(T("pl_rain"));
+  return {m,start,mins,end,sunset,water,gear,warn,latest:sunset-60-mins};
+}
+function renderPlan(t,p,out){
+  let h=`<h4>${esc(L(t.name))}</h4>`;
+  if(t.multi){ h+=`<p>${esc(T("pl_multi"))}</p>`; }
+  else h+=`<p><b>${esc(T("pl_tl"))}</b></p><ul class="pl-tl"><li><b>${clock(p.start)}</b> ${esc(T("pl_start"))}</li><li><b>${clock(p.start+p.mins/2)}</b> ${esc(T("pl_turn"))}</li><li><b>${clock(p.end)}</b> ${esc(T("pl_end"))} (${fmtH(p.mins)})</li><li><b>${clock(p.sunset)}</b> ${esc(T("pl_sunset"))}</li><li><b>${clock(Math.max(0,p.latest))}</b> ${esc(T("pl_latest"))}</li></ul>
+    <p><b>${esc(T("pl_water"))}:</b> ${num(p.water)} ${esc(T("pl_perp"))}</p>`;
+  h+=`<p><b>${esc(T("pl_gear"))}:</b> ${p.gear.map(esc).join(" · ")}</p>`;
+  h+=`<p><b>${esc(T("pl_risks"))}:</b></p><ul>`+[...p.warn,L(t.hazards)].map(w=>`<li>${esc(w)}</li>`).join("")+`</ul><p class="pl-ck">${esc(T("pl_ck"))}</p>`;
+  out.innerHTML=h;
+}
+async function cloudPlan(t,p,who,out){
+  const rules=`Create a personal hiking plan for this trip in Oman. Answer ONLY in ${T("lang_name")}, max 170 words, short "- " lines with **bold** labels.
+Include: 1) timeline with clock times (start, halfway check, return, sunset, latest safe start), 2) water per person, 3) 5-8 gear items, 4) the top 3 risks and what to do, 5) a reminder to turn on the app's Safety check-in and that emergency is 9999.
+Trip facts (computed by the app, keep them): ${JSON.stringify({trail:L(t.name),region:L(t.region),level:T(t.lvl),km:t.km,ascent_m:t.ascent,group:T("pk_w")[who],month:T("months")[p.m],start:clock(p.start),hiking_time:t.multi?T("days")(t.daysN):fmtH(p.mins),return:t.multi?null:clock(p.end),sunset:clock(p.sunset),water_l_per_person:p.water,flash_flood_risk:t.wadi,hazards:L(t.hazards),warnings:p.warn})}`;
+  out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
+  try{ const r=await sampleFn(rules,{cache:false,modelTier:"quick",onText:({text})=>{out.innerHTML=mdLite(text,false);}}); out.innerHTML=mdLite(r.text,true); }
+  catch(e){ renderPlan(t,p,out); out.insertAdjacentHTML("afterbegin",`<p class="ai-errline">${esc(aiErrText(e))}</p>`); }
+}
+/* cloud helpers for identify & translate */
+async function cloudIdentify(f,out){ out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
+  try{ const r=await sampleFn(`A hiker in Oman took this photo. Identify the main animal, insect, plant, rock feature or landmark. Answer ONLY in ${T("lang_name")}, max 110 words: first a bold line with its name; then "- " lines: is it dangerous to people (venomous snakes, scorpions, toxic or thorny plants)? what to do (keep distance, do not touch; if bitten or stung stay calm, keep the limb still and call 9999); one interesting fact about it in Oman. If unsure, say so and advise treating it as dangerous.`,{images:f,onText:({text})=>{out.innerHTML=mdLite(text,false);}}); out.innerHTML=mdLite(r.text,true); }
+  catch(e){ out.innerHTML=`<p class="ai-errline">${esc(aiErrText(e))}</p>`; } }
+async function cloudTranslate(text,to,out){ out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
+  const names={ar:"Arabic (simple Modern Standard Arabic understood in Oman)",en:"English",de:"German",fr:"French",ru:"Russian"};
+  try{ const r=await sampleFn(`Translate the following text into ${names[to]}. Output ONLY the translation on the first line${to==="ar"?", then on a second line a simple Latin-letter pronunciation starting with \"Pronunciation:\"":""}. Text: """${text}"""`,{cache:false,modelTier:"quick"});
+    const [a,...rest]=r.text.trim().split("\n"); showTranslation(a,to,out,rest.join(" ").trim()); }
+  catch(e){ out.innerHTML=`<p class="ai-errline">${esc(aiErrText(e))}</p>`; } }
+
+/* ---------- hub UI ---------- */
+let aiTool=0, aiImgOK=true;
+function renderAIHub(){
+  const on=!!sampleFn, dev=!on;
+  $("#aih-engine").textContent=on?T("aih_cloud"):T("aih_dev");
+  $("#aih-dl").hidden=!dev; $("#aih-dl").textContent=(_emb&&_clip)?T("aih_ready"):T("aih_load"); $("#aih-dl").disabled=!!(_emb&&_clip);
+  $("#ai-tools").innerHTML=T("aiT").map((x,i)=>`<button type="button" role="tab" data-t="${i}" aria-selected="${i===aiTool}"><span class="ait-ico">${["💬","⛈️","🔍","🌐","🗓️"][i]}</span><span>${esc(x)}</span><small>${esc(T("aiK")[i])}</small></button>`).join("");
+  $("#ai-tools").querySelectorAll("button").forEach(b=>b.onclick=()=>{ aiTool=+b.dataset.t; renderAIHub(); });
+  document.querySelectorAll("#ai-box .ai-panel").forEach(p=>p.hidden=+p.dataset.p!==aiTool);
+  $("#ai-photo").hidden=aiTool!==1;
+  $("#tr-to").innerHTML=["ar","en","de","fr","ru"].map(l=>`<option value="${l}">${{ar:"العربية",en:"English",de:"Deutsch",fr:"Français",ru:"Русский"}[l]}</option>`).join("");
+  $("#tr-to").value=$("#tr-to").dataset.v||(lang==="ar"?"en":"ar");
+  $("#tr-in").placeholder=T("tr_ph");
+  const cur=$("#pl-trail").value; $("#pl-trail").innerHTML=TRAILS.map(t=>`<option value="${t.id}">${esc(L(t.name))}</option>`).join(""); if(cur) $("#pl-trail").value=cur;
+  const w=$("#pl-who").value; $("#pl-who").innerHTML=T("pk_w").map((x,i)=>`<option value="${i}">${esc(x)}</option>`).join(""); $("#pl-who").value=w||"0";
+  if(!$("#pl-date").value){ const d=new Date(); $("#pl-date").value=d.toISOString().slice(0,10); }
+}
+function renderAIAvail(){ $("#ai-box").hidden=false; $("#ai-unavail").hidden=true; if(sampleFn&&sampleFn.limits){ sampleFn.limits().then(c=>{ aiImgOK=!!(c&&c.images); }).catch(()=>{}); } if($("#aih-engine")&&I18N.ar.aiT) renderAIHub(); }
+/* re-route shared entry points to the right engine */
+const _cloudAsk=aiAsk; aiAsk=function(q){ return sampleFn?_cloudAsk(q):localAsk(q); };
+(function(){ const old=$("#ai-photo-in"), nw=old.cloneNode(true); old.replaceWith(nw);
+  nw.addEventListener("change",async e=>{ const f=e.target.files[0]; e.target.value=""; if(!f) return; const out=$("#ai-photo-out");
+    if(!sampleFn) return localWeather(f,out);
+    out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
+    try{ const r=await sampleFn(`A hiker in Oman took this photo of the sky, a wadi bed or a trail. Assess only the safety signs you can actually see: storm or rain clouds over the mountains, flowing, muddy or rising water, debris lines from recent floods, exposure to cliffs, heat and lack of shade. Answer ONLY in ${T("lang_name")}, in 3 to 5 short "- " bullet lines, then one final bold line with a clear verdict: safe to continue, be careful, or leave the wadi for higher ground now. Say that you cannot be certain from one photo and that official weather warnings and the emergency number 9999 come first.`,{images:f,onText:({text})=>{out.innerHTML=mdLite(text,false);}}); out.innerHTML=mdLite(r.text,true); }
+    catch(err){ out.innerHTML=(err&&err.text?mdLite(err.text,true):"")+`<p class="ai-errline">${esc(aiErrText(err))}</p>`; } }); })();
+$("#id-in").addEventListener("change",e=>{ const f=e.target.files[0]; e.target.value=""; if(!f) return; const out=$("#id-out"); (sampleFn&&aiImgOK)?cloudIdentify(f,out):localIdentify(f,out); });
+$("#tr-to").addEventListener("change",e=>{ e.target.dataset.v=e.target.value; });
+$("#tr-go").addEventListener("click",()=>{ const t=$("#tr-in").value.trim(), to=$("#tr-to").value, out=$("#tr-out"); if(!t){ out.innerHTML=""; renderPhraseList(to,out); return; } sampleFn?cloudTranslate(t,to,out):localTranslate(t,to,out); });
+$("#pl-go").addEventListener("click",()=>{ const t=TRAILS.find(x=>x.id===$("#pl-trail").value), who=+$("#pl-who").value, p=expertPlan(t,$("#pl-date").value,$("#pl-time").value,who), out=$("#pl-out"); sampleFn?cloudPlan(t,p,who,out):renderPlan(t,p,out); });
+$("#aih-dl").addEventListener("click",async()=>{ const b=$("#aih-dl"); b.disabled=true;
+  try{ await getEmb(b); await getClip(b); b.textContent=T("aih_ready"); }catch(e){ b.disabled=false; b.textContent=T("aih_fail"); } });
+renderAIAvail();
 
 applyLang();
 if("serviceWorker" in navigator && location.protocol==="https:"){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
