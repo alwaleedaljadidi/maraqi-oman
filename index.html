@@ -3,13 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#D9601F">
-<link rel="apple-touch-icon" href="apple-touch-icon-v2.png">
-<link rel="icon" type="image/png" href="icon-192-v2.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="مَراقي عُمان">
-<meta name="description" content="مسارات المشي في عُمان: الطريق والوقت والمخاطر، بخمس لغات">
 <title>مَراقي عُمان</title>
 <style>
 @font-face{font-family:"Maraqi Ruqaa";font-weight:700;font-display:swap;src:url(data:font/woff2;base64,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) format("woff2");unicode-range:U+0600-06FF,U+200C-200E,U+FE70-FEFF}
@@ -1626,7 +1619,7 @@ Object.assign(I18N.ar,{aih_title:"المرشد الذكي بالذكاء الا�
   id_h:"تعرّف على ما تراه",id_note:"صوّر حيوانًا أو حشرة أو نباتًا أو معلمًا، وسيتعرّف عليه الذكاء الاصطناعي ويخبرك إن كان خطرًا وماذا تفعل.",id_btn:"اختر صورة للتعرّف عليها",
   id_unsure:"لم أتعرّف عليه بثقة كافية. تعامل معه كأنه خطر: لا تلمسه وابتعد عنه.",id_guess:"أقرب احتمال",id_conf:"درجة الثقة",
   dz:["غير خطر عادةً","انتبه","خطر: ابتعد"],
-  tr_h:"المترجم الفوري",tr_note:"اكتب ما تريد قوله بأي لغة، واختر لغة الشخص الذي تحادثه، ثم اعرض الترجمة له بخط كبير.",tr_to:"ترجم إلى",tr_ph:"مثال: أين أجد ماء للشرب؟",tr_go:"ترجم",tr_near:"أقرب عبارة جاهزة",tr_low:"لم أجد عبارة مطابقة. اختر عبارة من القائمة:",tr_list:"عبارات جاهزة",
+  tr_h:"المترجم الفوري",tr_note:"اكتب ما تريد قوله بأي لغة، واختر لغة الشخص الذي تحادثه، ثم اعرض الترجمة له بخط كبير.",tr_to:"ترجم إلى",tr_ph:"مثال: أين أجد ماء للشرب؟",tr_go:"ترجم",tr_near:"أقرب عبارة جاهزة",tr_word:"كلمة من قاموس التطبيق",tr_low:"دون إنترنت أترجم الكلمات والعبارات الجاهزة فقط، ولم أجد ما يطابق نصك. اختر من المقترح أو من القائمة، أو اتصل بالإنترنت لترجمة أي نص:",tr_list:"عبارات جاهزة",
   pl_h:"خطة رحلتي",pl_note:"اختر المسار والتاريخ ووقت الانطلاق ومن معك، وسيبني لك الذكاء الاصطناعي خطة كاملة.",pl_date:"تاريخ الرحلة",pl_time:"وقت الانطلاق من بداية المسار",pl_go:"أنشئ خطتي",
   pl_tl:"الجدول الزمني",pl_start:"الانطلاق من بداية المسار",pl_turn:"نقطة المنتصف: راجع وقتك وماءك",pl_end:"العودة المتوقعة",pl_sunset:"الغروب",pl_latest:"آخر وقت آمن للانطلاق",
   pl_water:"الماء",pl_perp:"لتر لكل شخص",pl_gear:"التجهيزات",pl_risks:"أهم المخاطر",pl_ck:"قبل الانطلاق: شغّل «متابعة السلامة» من تبويب الوقت.",pl_multi:"مسار متعدد الأيام: خطط لكل مرحلة على حدة واستعن بمرشد.",
@@ -1642,7 +1635,7 @@ Object.assign(I18N.en,{aih_title:"AI smart guide",aih_intro:"Five smart tools fo
   id_h:"Identify what you see",id_note:"Photograph an animal, insect, plant or landmark, and the AI will identify it and tell you if it is dangerous and what to do.",id_btn:"Choose a photo to identify",
   id_unsure:"I could not identify it with enough confidence. Treat it as dangerous: do not touch it and keep away.",id_guess:"Closest match",id_conf:"Confidence",
   dz:["Usually harmless","Be careful","Dangerous: keep away"],
-  tr_h:"Instant translator",tr_note:"Type what you want to say in any language, choose the language of the person you are talking to, then show them the translation in large text.",tr_to:"Translate to",tr_ph:"Example: Where can I find drinking water?",tr_go:"Translate",tr_near:"Closest ready phrase",tr_low:"No matching phrase found. Pick one from the list:",tr_list:"Ready phrases",
+  tr_h:"Instant translator",tr_note:"Type what you want to say in any language, choose the language of the person you are talking to, then show them the translation in large text.",tr_to:"Translate to",tr_ph:"Example: Where can I find drinking water?",tr_go:"Translate",tr_near:"Closest ready phrase",tr_word:"Word from the app dictionary",tr_low:"Offline, I only translate ready words and phrases, and none matches your text. Pick a suggestion or one from the list, or go online to translate any text:",tr_list:"Ready phrases",
   pl_h:"My trip plan",pl_note:"Choose the trail, date, start time and who is coming, and the AI will build a complete plan.",pl_date:"Trip date",pl_time:"Start time at the trailhead",pl_go:"Build my plan",
   pl_tl:"Timeline",pl_start:"Start at the trailhead",pl_turn:"Halfway: check your time and water",pl_end:"Expected return",pl_sunset:"Sunset",pl_latest:"Latest safe start",
   pl_water:"Water",pl_perp:"litres per person",pl_gear:"Gear",pl_risks:"Main risks",pl_ck:"Before you start: turn on “Safety check-in” in the Time tab.",pl_multi:"Multi-day route: plan each stage separately and use a guide.",
@@ -1658,7 +1651,7 @@ Object.assign(I18N.de,{aih_title:"KI-Guide",aih_intro:"Fünf smarte Werkzeuge vo
   id_h:"Erkennen, was du siehst",id_note:"Fotografiere ein Tier, Insekt, eine Pflanze oder ein Wahrzeichen; die KI erkennt es und sagt dir, ob es gefährlich ist und was zu tun ist.",id_btn:"Foto zum Erkennen wählen",
   id_unsure:"Nicht sicher erkannt. Behandle es als gefährlich: nicht berühren und Abstand halten.",id_guess:"Nächste Übereinstimmung",id_conf:"Sicherheit",
   dz:["Meist harmlos","Vorsicht","Gefährlich: Abstand halten"],
-  tr_h:"Sofort-Übersetzer",tr_note:"Schreib in beliebiger Sprache, was du sagen willst, wähle die Sprache deines Gegenübers und zeig ihm die Übersetzung in großer Schrift.",tr_to:"Übersetzen in",tr_ph:"Beispiel: Wo finde ich Trinkwasser?",tr_go:"Übersetzen",tr_near:"Nächster fertiger Satz",tr_low:"Kein passender Satz gefunden. Wähle einen aus der Liste:",tr_list:"Fertige Sätze",
+  tr_h:"Sofort-Übersetzer",tr_note:"Schreib in beliebiger Sprache, was du sagen willst, wähle die Sprache deines Gegenübers und zeig ihm die Übersetzung in großer Schrift.",tr_to:"Übersetzen in",tr_ph:"Beispiel: Wo finde ich Trinkwasser?",tr_go:"Übersetzen",tr_near:"Nächster fertiger Satz",tr_word:"Wort aus dem App-Wörterbuch",tr_low:"Offline übersetze ich nur fertige Wörter und Sätze; nichts passt zu Ihrem Text. Wählen Sie einen Vorschlag oder gehen Sie online:",tr_list:"Fertige Sätze",
   pl_h:"Mein Tourplan",pl_note:"Wähle Weg, Datum, Startzeit und Begleitung, und die KI erstellt einen vollständigen Plan.",pl_date:"Datum",pl_time:"Startzeit am Einstieg",pl_go:"Plan erstellen",
   pl_tl:"Zeitplan",pl_start:"Start am Einstieg",pl_turn:"Halbzeit: Zeit und Wasser prüfen",pl_end:"Geplante Rückkehr",pl_sunset:"Sonnenuntergang",pl_latest:"Spätester sicherer Start",
   pl_water:"Wasser",pl_perp:"Liter pro Person",pl_gear:"Ausrüstung",pl_risks:"Wichtigste Risiken",pl_ck:"Vor dem Start: „Sicherheits-Check-in“ im Tab Zeit aktivieren.",pl_multi:"Mehrtägige Route: plane jede Etappe einzeln und nimm einen Führer.",
@@ -1674,7 +1667,7 @@ Object.assign(I18N.fr,{aih_title:"Guide intelligent (IA)",aih_intro:"Cinq outils
   id_h:"Identifier ce que je vois",id_note:"Photographiez un animal, un insecte, une plante ou un monument : l’IA l’identifie et vous dit s’il est dangereux et quoi faire.",id_btn:"Choisir une photo à identifier",
   id_unsure:"Identification incertaine. Considérez-le comme dangereux : ne le touchez pas et éloignez-vous.",id_guess:"Correspondance la plus proche",id_conf:"Confiance",
   dz:["Généralement inoffensif","Prudence","Dangereux : éloignez-vous"],
-  tr_h:"Traducteur instantané",tr_note:"Écrivez dans n’importe quelle langue, choisissez la langue de votre interlocuteur et montrez-lui la traduction en grand.",tr_to:"Traduire en",tr_ph:"Exemple : Où trouver de l’eau potable ?",tr_go:"Traduire",tr_near:"Phrase prête la plus proche",tr_low:"Aucune phrase correspondante. Choisissez-en une dans la liste :",tr_list:"Phrases prêtes",
+  tr_h:"Traducteur instantané",tr_note:"Écrivez dans n’importe quelle langue, choisissez la langue de votre interlocuteur et montrez-lui la traduction en grand.",tr_to:"Traduire en",tr_ph:"Exemple : Où trouver de l’eau potable ?",tr_go:"Traduire",tr_near:"Phrase prête la plus proche",tr_word:"Mot du dictionnaire de l’appli",tr_low:"Hors ligne, je ne traduis que des mots et phrases prêts ; rien ne correspond. Choisissez une suggestion ou connectez-vous :",tr_list:"Phrases prêtes",
   pl_h:"Mon plan de sortie",pl_note:"Choisissez le sentier, la date, l’heure de départ et vos accompagnants : l’IA construit un plan complet.",pl_date:"Date",pl_time:"Heure de départ au sentier",pl_go:"Créer mon plan",
   pl_tl:"Horaire",pl_start:"Départ du sentier",pl_turn:"Mi-parcours : vérifiez l’heure et l’eau",pl_end:"Retour prévu",pl_sunset:"Coucher du soleil",pl_latest:"Dernier départ sûr",
   pl_water:"Eau",pl_perp:"litres par personne",pl_gear:"Équipement",pl_risks:"Principaux risques",pl_ck:"Avant de partir : activez le « Suivi de sécurité » dans l’onglet Durée.",pl_multi:"Itinéraire de plusieurs jours : planifiez chaque étape et prenez un guide.",
@@ -1690,7 +1683,7 @@ Object.assign(I18N.ru,{aih_title:"Умный гид (ИИ)",aih_intro:"Пять 
   id_h:"Что я вижу?",id_note:"Сфотографируйте животное, насекомое, растение или объект — ИИ определит его и скажет, опасно ли это и что делать.",id_btn:"Выбрать фото для распознавания",
   id_unsure:"Не удалось уверенно определить. Считайте это опасным: не трогайте и держитесь подальше.",id_guess:"Ближайшее совпадение",id_conf:"Уверенность",
   dz:["Обычно безопасно","Осторожно","Опасно: держитесь подальше"],
-  tr_h:"Мгновенный переводчик",tr_note:"Напишите фразу на любом языке, выберите язык собеседника и покажите ему перевод крупным шрифтом.",tr_to:"Перевести на",tr_ph:"Например: Где найти питьевую воду?",tr_go:"Перевести",tr_near:"Ближайшая готовая фраза",tr_low:"Подходящая фраза не найдена. Выберите из списка:",tr_list:"Готовые фразы",
+  tr_h:"Мгновенный переводчик",tr_note:"Напишите фразу на любом языке, выберите язык собеседника и покажите ему перевод крупным шрифтом.",tr_to:"Перевести на",tr_ph:"Например: Где найти питьевую воду?",tr_go:"Перевести",tr_near:"Ближайшая готовая фраза",tr_word:"Слово из словаря приложения",tr_low:"Без интернета я перевожу только готовые слова и фразы; ничего не подошло. Выберите вариант или подключитесь к сети:",tr_list:"Готовые фразы",
   pl_h:"Мой план похода",pl_note:"Выберите маршрут, дату, время старта и спутников — ИИ составит полный план.",pl_date:"Дата похода",pl_time:"Время старта на тропе",pl_go:"Составить план",
   pl_tl:"Расписание",pl_start:"Старт на тропе",pl_turn:"Половина пути: проверьте время и воду",pl_end:"Ожидаемое возвращение",pl_sunset:"Закат",pl_latest:"Последний безопасный старт",
   pl_water:"Вода",pl_perp:"л на человека",pl_gear:"Снаряжение",pl_risks:"Главные риски",pl_ck:"Перед выходом включите «Контроль безопасности» во вкладке «Время».",pl_multi:"Многодневный маршрут: планируйте каждый этап отдельно и возьмите гида.",
@@ -1800,25 +1793,131 @@ async function localWeather(f,out){
     out.innerHTML=`<p><b>${esc(T("wx_seen"))}:</b></p><ul>${seen}</ul><p class="wx-v wx-${lvl}"><b>${esc(T("wx")[lvl])}</b></p><p class="muted-s">${esc(T("ai_disclaimer"))}</p>`;
   }catch(e){ aiLocalFail(out,e); }
 }
-/* identify: zero-shot image classification + local species database */
+/* identify: zero-shot image classification + local species database.
+   Scenery / people / objects are included as "nothing to identify" classes so a pretty landscape is never forced into an animal. */
+const NOT_WILD=[
+ ["a beautiful landscape of mountains and valleys",{ar:"منظر طبيعي للجبال والأودية",en:"A mountain landscape",de:"Berglandschaft",fr:"Paysage de montagne",ru:"Горный пейзаж"}],
+ ["a scenic view of a canyon or wadi with water",{ar:"منظر لوادٍ أو أخدود",en:"A wadi or canyon view",de:"Blick auf Wadi oder Schlucht",fr:"Vue d’un wadi ou canyon",ru:"Вид вади или каньона"}],
+ ["a beach and the sea",{ar:"شاطئ وبحر",en:"A beach and sea",de:"Strand und Meer",fr:"Plage et mer",ru:"Пляж и море"}],
+ ["desert sand dunes",{ar:"كثبان رملية",en:"Sand dunes",de:"Sanddünen",fr:"Dunes de sable",ru:"Песчаные дюны"}],
+ ["a plain rocky ground and stones",{ar:"صخور وأحجار",en:"Rocks and stones",de:"Felsen und Steine",fr:"Rochers et pierres",ru:"Скалы и камни"}],
+ ["a blue sky with clouds",{ar:"سماء وغيوم",en:"Sky and clouds",de:"Himmel und Wolken",fr:"Ciel et nuages",ru:"Небо и облака"}],
+ ["a group of people or a selfie of a person",{ar:"أشخاص",en:"People",de:"Personen",fr:"Personnes",ru:"Люди"}],
+ ["a car, a road or a building",{ar:"سيارة أو طريق أو مبنى",en:"A car, road or building",de:"Auto, Straße oder Gebäude",fr:"Voiture, route ou bâtiment",ru:"Машина, дорога или здание"}],
+ ["food, a drink or a tent for camping",{ar:"طعام أو مخيم",en:"Food or camping gear",de:"Essen oder Campingausrüstung",fr:"Nourriture ou matériel de camping",ru:"Еда или снаряжение"}],
+ ["a plain grass field or green bushes",{ar:"أعشاب وشجيرات خضراء",en:"Grass and green bushes",de:"Gras und grüne Büsche",fr:"Herbe et buissons verts",ru:"Трава и кусты"}]];
+const NW_MSG={ar:"لا أرى حيوانًا أو نباتًا محددًا في الصورة. التقط صورة قريبة وواضحة للشيء الذي تريد معرفته.",en:"I can’t see a specific animal or plant in this photo. Take a close, clear photo of what you want to identify.",de:"Auf dem Foto ist kein bestimmtes Tier oder keine Pflanze zu erkennen. Machen Sie ein nahes, klares Foto.",fr:"Je ne vois pas d’animal ou de plante précis sur cette photo. Prenez une photo nette et rapprochée.",ru:"На фото не видно конкретного животного или растения. Сделайте чёткий снимок крупным планом."};
+const NW_SEEN={ar:"ما يظهر في الصورة",en:"What the photo shows",de:"Das Foto zeigt",fr:"La photo montre",ru:"На фото"};
 async function localIdentify(f,out){
   out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
   try{ const clf=await getClip(out.querySelector("p")); const url=URL.createObjectURL(f);
-    const r=await clf(url,WILD.map(x=>x[0])); URL.revokeObjectURL(url);
-    const top=r[0], w=WILD.find(x=>x[0]===top.label);
+    const labels=WILD.map(x=>x[0]).concat(NOT_WILD.map(x=>x[0]));
+    const r=await clf(url,labels,{hypothesis_template:"a photo of {}."}); URL.revokeObjectURL(url);
+    const top=r[0], w=WILD.find(x=>x[0]===top.label), nw=NOT_WILD.find(x=>x[0]===top.label);
+    if(nw){ out.innerHTML=`<p><b>${esc(NW_SEEN[lang])}:</b> ${esc(L(nw[1]))}</p><p>${esc(NW_MSG[lang])}</p>`; return; }
     const conf=`<p class="muted-s">${esc(T("id_conf"))}: ${Math.round(top.score*100)}%</p>`;
-    if(top.score<0.3){ out.innerHTML=`<p class="wx-v wx-2"><b>${esc(T("id_unsure"))}</b></p><p>${esc(T("id_guess"))}: ${esc(L(w[2]))}</p>${conf}`; return; }
+    if(top.score<0.5){ out.innerHTML=`<p class="wx-v wx-2"><b>${esc(T("id_unsure"))}</b></p><p>${esc(NW_MSG[lang])}</p>${conf}`; return; }
     out.innerHTML=`<p class="id-name">${esc(L(w[2]))} <span class="dz dz-${w[1]}">${esc(T("dz")[w[1]])}</span></p><p>${esc(L(w[3]))}</p>${conf}`;
   }catch(e){ aiLocalFail(out,e); }
 }
-/* translator: semantic match to ready phrases */
+/* offline word dictionary: exact lookups come first */
+const WORDS=(function(){ const W=(ar,en,de,fr,ru)=>({ar,en,de,fr,ru}); return [
+ W("ماء|الماء|مياه|المياه","water","wasser","eau","вода|воду|воды"),
+ W("طعام|الطعام|أكل|الأكل","food","essen|nahrung","nourriture|manger","еда|пища"),
+ W("خبز|الخبز","bread","brot","pain","хлеб"),
+ W("تمر|التمر","dates","datteln","dattes","финики"),
+ W("قهوة|القهوة","coffee","kaffee","café","кофе"),
+ W("شاي|الشاي","tea","tee","thé","чай"),
+ W("مساعدة|النجدة|ساعدني","help","hilfe","aide|au secours","помощь|помогите"),
+ W("طبيب|الطبيب|دكتور","doctor","arzt","médecin|docteur","врач|доктор"),
+ W("مستشفى|المستشفى","hospital","krankenhaus","hôpital","больница"),
+ W("إسعاف|الإسعاف","ambulance","krankenwagen|rettungswagen","ambulance","скорая помощь|скорая"),
+ W("شرطة|الشرطة","police","polizei","police","полиция"),
+ W("طريق|الطريق","road|way","straße|weg","route|chemin","дорога|путь"),
+ W("مسار|المسار|ممر","trail|path","wanderweg|pfad","sentier","тропа|тропинка"),
+ W("جبل|الجبل","mountain","berg","montagne","гора"),
+ W("وادي|الوادي","valley|wadi","tal|wadi","vallée|wadi","долина|вади"),
+ W("كهف|الكهف","cave","höhle","grotte","пещера"),
+ W("قرية|القرية","village","dorf","village","деревня"),
+ W("سيارة|السيارة","car","auto","voiture","машина|автомобиль"),
+ W("موقف|مواقف","parking","parkplatz","parking","парковка"),
+ W("دورة المياه|الحمام|حمام|مرحاض","toilet|restroom","toilette|wc","toilettes","туалет"),
+ W("محل|المحل|دكان|بقالة","shop|store","laden|geschäft","magasin|boutique","магазин"),
+ W("مطعم|المطعم","restaurant","restaurant","restaurant","ресторан"),
+ W("فندق|الفندق","hotel","hotel","hôtel","отель|гостиница"),
+ W("مرشد|المرشد|دليل","guide","führer|reiseführer","guide","гид|проводник"),
+ W("خريطة|الخريطة","map","karte","carte","карта"),
+ W("هاتف|الهاتف|جوال|الجوال","phone","telefon|handy","téléphone","телефон"),
+ W("بطارية|البطارية","battery","batterie|akku","batterie","батарея|аккумулятор"),
+ W("حار|حرارة|الحر","hot|heat","heiß|hitze","chaud|chaleur","жарко|жара"),
+ W("بارد|برد|البرد","cold","kalt|kälte","froid","холодно|холод"),
+ W("مطر|المطر","rain","regen","pluie","дождь"),
+ W("سيل|السيل|فيضان","flood|flash flood","flut|sturzflut","crue|inondation","паводок|наводнение"),
+ W("رياح|الرياح|ريح","wind","wind","vent","ветер"),
+ W("شمس|الشمس","sun","sonne","soleil","солнце"),
+ W("خطر|خطير|الخطر","danger|dangerous","gefahr|gefährlich","danger|dangereux","опасность|опасно"),
+ W("آمن|أمان|الأمان","safe|safety","sicher|sicherheit","sûr|sécurité","безопасно|безопасность"),
+ W("تائه|ضائع","lost","verloren|verirrt","perdu","потерялся|заблудился"),
+ W("متعب|تعبان|تعب","tired","müde","fatigué","устал|усталый"),
+ W("مصاب|جريح|إصابة","injured|hurt","verletzt","blessé","ранен|травма"),
+ W("عطشان|عطش","thirsty","durstig","soif","хочу пить|жажда"),
+ W("جائع|جوعان","hungry","hungrig","faim|affamé","голоден|голодный"),
+ W("يمين|اليمين","right","rechts","droite","направо|справа"),
+ W("يسار|اليسار","left","links","gauche","налево|слева"),
+ W("مستقيم|دغري","straight","geradeaus","tout droit","прямо"),
+ W("قريب|قريبا","near|close","nah","près|proche","близко"),
+ W("بعيد","far","weit","loin","далеко"),
+ W("نعم|أجل","yes","ja","oui","да"),
+ W("لا","no","nein","non","нет"),
+ W("من فضلك|لو سمحت","please","bitte","s'il vous plaît","пожалуйста"),
+ W("شكرا|شكرًا|شكرا لك","thanks|thank you","danke","merci","спасибо"),
+ W("آسف|عفوا|عفوًا|المعذرة","sorry|excuse me","entschuldigung","pardon|désolé","извините|простите"),
+ W("مرحبا|مرحبًا|السلام عليكم|أهلا|أهلًا","hello|hi","hallo","bonjour|salut","здравствуйте|привет"),
+ W("مع السلامة","goodbye|bye","auf wiedersehen|tschüss","au revoir","до свидания|пока"),
+ W("اليوم","today","heute","aujourd'hui","сегодня"),
+ W("غدا|غدًا|بكرة","tomorrow","morgen","demain","завтра"),
+ W("الصباح|صباح","morning","morgen|vormittag","matin","утро"),
+ W("المساء|مساء","evening","abend","soir","вечер"),
+ W("الغروب|غروب","sunset","sonnenuntergang","coucher du soleil","закат"),
+ W("سعر|الثمن|كم السعر","price","preis","prix","цена"),
+ W("قارب|القارب|مركب","boat","boot","bateau","лодка"),
+ W("ثعبان|أفعى|حية","snake","schlange","serpent","змея"),
+ W("عقرب|العقرب","scorpion","skorpion","scorpion","скорпион"),
+ W("خيمة|الخيمة","tent","zelt","tente","палатка"),
+ W("مخيم|التخييم","camp|camping","lager|camping","camp|camping","лагерь|кемпинг"),
+ W("حذاء|الحذاء","shoes","schuhe","chaussures","обувь|ботинки"),
+ W("قبعة|القبعة","hat","hut|mütze","chapeau","шляпа"),
+ W("حبل|الحبل","rope","seil","corde","верёвка|веревка"),
+ W("نار|النار","fire","feuer","feu","огонь"),
+ W("مصباح|كشاف","flashlight|torch","taschenlampe","lampe de poche","фонарик"),
+ W("ظل|الظل","shade","schatten","ombre","тень"),
+ W("بئر|البئر","well","brunnen","puits","колодец"),
+ W("فلج|الفلج","falaj","falaj","falaj","фаладж"),
+ W("شاطئ|الشاطئ","beach","strand","plage","пляж"),
+ W("بحر|البحر","sea","meer","mer","море"),
+ W("صحراء|الصحراء","desert","wüste","désert","пустыня"),
+ W("نخلة|النخيل","palm tree|palm","palme","palmier","пальма")
+ ].map(o=>{ const r={t:{},k:[]}; Object.keys(o).forEach(l=>{ const a=o[l].split("|"); r.t[l]=a[0]; a.forEach(x=>r.k.push(normW(x))); }); return r; }); })();
+function normW(x){ return (x||"").toLowerCase().replace(/[ً-ٰٟـ]/g,"").replace(/[إأآ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه").replace(/[\.,!?؟،:;"'«»()\-]/g,"").replace(/\s+/g," ").trim().replace(/^ال(?=.{3,})/,""); }
+function dictFind(text){ const n=normW(text); if(!n) return null;
+  return WORDS.find(w=>w.k.some(k=>normW(k)===n)) || null; }
+/* translator: 1) exact word  2) strict phrase match  3) honest "not found" + closest suggestions */
 async function localTranslate(text,to,out){
+  const hit=dictFind(text);
+  if(hit){ showTranslation(hit.t[to],to,out,T("tr_word")); return; }
   out.innerHTML=`<p class="thinking">${T("ai_thinking")}</p>`;
   try{ const LS=["ar","en","de","fr","ru"]; const all=[]; PHRASES.forEach((p,i)=>LS.forEach(l=>all.push({i,t:p[l]})));
     const pv=await embedCached("phr",all.map(x=>x.t),out.querySelector("p")); const [qv]=await embed([text]);
-    let best={s:-1,i:0}; all.forEach((x,k)=>{ const s=dot(qv,pv[k]); if(s>best.s) best={s,i:x.i}; });
-    if(best.s<0.6){ out.innerHTML=`<p>${esc(T("tr_low"))}</p>`; renderPhraseList(to,out); return; }
-    showTranslation(PHRASES[best.i][to],to,out,`${T("tr_near")} · ${Math.round(best.s*100)}%`);
+    const best={}; all.forEach((x,k)=>{ const s=dot(qv,pv[k]); if(!(best[x.i]>=s)) best[x.i]=s; });
+    const rank=Object.entries(best).map(([i,s])=>({i:+i,s})).sort((a,b)=>b.s-a.s);
+    const words=text.trim().split(/\s+/).length, need=words<=2?0.86:0.78;
+    if(rank[0].s>=need){ showTranslation(PHRASES[rank[0].i][to],to,out,`${T("tr_near")} · ${Math.round(rank[0].s*100)}%`); return; }
+    out.innerHTML=`<p>${esc(T("tr_low"))}</p>`;
+    const d=document.createElement("div"); d.className="tr-chips";
+    d.innerHTML=rank.slice(0,3).filter(x=>x.s>=0.5).map(x=>`<button type="button" class="chip" data-i="${x.i}">${esc(PHRASES[x.i][lang])}</button>`).join("");
+    d.querySelectorAll("button").forEach(bt=>bt.onclick=()=>showTranslation(PHRASES[+bt.dataset.i][to],to,out,T("tr_list")));
+    if(d.children.length) out.append(d);
+    renderPhraseList(to,out);
   }catch(e){ aiLocalFail(out,e); }
 }
 function showTranslation(txt,to,out,meta){ out.innerHTML=`<p class="tr-big" dir="${to==="ar"?"rtl":"ltr"}" lang="${to}">${esc(txt)}</p>${meta?`<p class="muted-s">${esc(meta)}</p>`:""}`; }
@@ -1903,7 +2002,6 @@ $("#aih-dl").addEventListener("click",async()=>{ const b=$("#aih-dl"); b.disable
 renderAIAvail();
 
 applyLang();
-if("serviceWorker" in navigator && location.protocol==="https:"){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
 </script>
 </body>
 </html>
